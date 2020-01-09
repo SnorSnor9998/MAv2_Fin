@@ -62,6 +62,7 @@ import kotlinx.android.synthetic.main.activity_edit.textView21
 import kotlinx.android.synthetic.main.activity_edit.textView22
 import kotlinx.android.synthetic.main.activity_edit.tv_typefooderror
 import kotlinx.android.synthetic.main.fragment_addactivity.*
+import org.jetbrains.anko.toast
 import java.lang.Exception
 
 
@@ -74,7 +75,7 @@ class EditActivity : AppCompatActivity() {
     var formate = SimpleDateFormat("dd/MM/yyyy", Locale.US)
     var timeFormat = SimpleDateFormat("HH:mm", Locale.US)
 
-    var selectedDATE : Date? = null
+    var selectedDATE : Date? = Calendar.getInstance().time
     var selectedPhotoUri : Uri? = null
 
 
@@ -241,6 +242,7 @@ class EditActivity : AppCompatActivity() {
                 }
             }
 
+
             val now : Date = Calendar.getInstance().time
             if(now.after(selectedDATE)){
                 validate = false
@@ -295,6 +297,8 @@ class EditActivity : AppCompatActivity() {
 
                 uploadFirebaseImage()
 
+                toast("Edit Complete")
+
             }
         }
 
@@ -302,19 +306,21 @@ class EditActivity : AppCompatActivity() {
     }
 
     private fun uploadFirebaseImage (){
-        if(selectedPhotoUri == null) return
-        val filename = UUID.randomUUID().toString()
-        val ref = FirebaseStorage.getInstance().getReference("/image/$filename")
+        if(selectedPhotoUri == null)
+            updateFKActivity(updateActivicty.activity_imageUrl)
+        else {
+            val filename = UUID.randomUUID().toString()
+            val ref = FirebaseStorage.getInstance().getReference("/image/$filename")
 
-        ref.putFile(selectedPhotoUri!!).addOnSuccessListener {
-            ref.downloadUrl.addOnSuccessListener {
+            ref.putFile(selectedPhotoUri!!).addOnSuccessListener {
+                ref.downloadUrl.addOnSuccessListener {
 
-                updateFKActivity(it.toString())
-                //fkact.activity_imageUrl = it.toString()
+                    updateFKActivity(it.toString())
+                    //fkact.activity_imageUrl = it.toString()
+                }
             }
+
         }
-
-
     }
 
     private fun updateFKActivity(imageUrl : String){
@@ -370,12 +376,14 @@ class EditActivity : AppCompatActivity() {
                     val fkact = it.getValue(fkactivity::class.java)
                     if(fkact!=null){
                         updateActivicty.activity_id = fkact.activity_id
+                        updateActivicty.activity_imageUrl = fkact.activity_imageUrl
                         Picasso.get().load(fkact.activity_imageUrl).into(cna_butt_uploadphoto)
                         cna_title.setText(fkact.activity_title)
                         cna_time_from.setText(fkact.activity_time_start)
                         cna_time_to.setText(fkact.activity_time_end)
                         var formate = SimpleDateFormat("dd/MM/yyyy", Locale.US)
                         val tmpdate = fkact.activity_date
+                        selectedDATE = fkact.activity_date
                         butt_date.setText(formate.format(tmpdate))
                         cna_address.setText(fkact.activity_address)
                         cna_desc.setText(fkact.activity_desc)

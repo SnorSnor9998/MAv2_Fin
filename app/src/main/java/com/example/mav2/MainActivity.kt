@@ -19,11 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-//        if(mAuth.currentUser != null){
-//            val intent = Intent(this,homev2Activity::class.java)
-//            finish()
-//            startActivity(intent)
-//        }
+        if(mAuth.currentUser != null){
+            val intent = Intent(this,homev2Activity::class.java)
+            finish()
+            startActivity(intent)
+        }
 
 
         txt_forgetPass.setOnClickListener {

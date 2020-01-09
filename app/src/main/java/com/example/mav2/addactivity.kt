@@ -44,7 +44,7 @@ class addactivity : Fragment() {
     var timeFormat = SimpleDateFormat("HH:mm", Locale.US)
 
 
-    var selectedDATE : Date? = null
+    var selectedDATE : Date? = Calendar.getInstance().time
     var selectedPhotoUri : Uri? = null
 
     private var placeFields = Arrays.asList(
