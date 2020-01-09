@@ -79,7 +79,7 @@ class MyProfile : Fragment() {
     private fun startMyActivity(){
 
         var fr = fragmentManager?.beginTransaction()
-        var home = homeview()
+        var home = myAcitivity()
         var bundle = Bundle()
         bundle.putInt("isProfile",1)
         home.arguments = bundle
