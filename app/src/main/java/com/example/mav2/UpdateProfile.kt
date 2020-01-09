@@ -90,7 +90,8 @@ class UpdateProfile : Fragment() {
         }
         else{
 
-                val credentials = EmailAuthProvider.getCredential(binding.editText2.text.toString(),password)
+                val credentials = mail?.let { EmailAuthProvider.getCredential(it,password) }
+            if (credentials != null) {
                 mAuth.currentUser?.reauthenticate(credentials)?.addOnCompleteListener{
                     if(it.isSuccessful){
                         try{
@@ -100,16 +101,16 @@ class UpdateProfile : Fragment() {
                             mAuth.currentUser?.updateEmail(binding.editText2.text.toString())
 
                             Toast.makeText(this.requireContext(),"Profile updated", Toast.LENGTH_SHORT).show()
-                         }catch (e:Exception){
+                        }catch (e:Exception){
                             e.printStackTrace()
                             Toast.makeText(this.requireContext(),"Update failed", Toast.LENGTH_SHORT).show()
                         }
-                    }
-                    else{
+                    } else{
                         Toast.makeText(this.requireContext(),"Incorrect password", Toast.LENGTH_SHORT).show()
                     }
 
-                    }
+                }
+            }
 
 
         }
