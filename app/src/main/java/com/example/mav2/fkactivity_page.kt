@@ -27,6 +27,7 @@ class fkactivity_page : AppCompatActivity() {
 
 
     var act_id:String? = ""
+    var voluspace : Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +44,7 @@ class fkactivity_page : AppCompatActivity() {
 
         btnDelete.setOnClickListener { deleteActivity() }
         btnEdit.setOnClickListener { controller(1) }
+        btnList.setOnClickListener { startVolunteerList() }
 
 
 
@@ -139,6 +141,7 @@ class fkactivity_page : AppCompatActivity() {
                                             val listStr : String = "("+fkvolu.space+"/"+fkvolu.size_of_volunteer+") Volunteer Count"
                                             cna_button.setText(tmpstr)
                                             btnList.setText(listStr)
+                                            voluspace = fkvolu.space
 
 
                                             val i =0
@@ -227,25 +230,18 @@ class fkactivity_page : AppCompatActivity() {
 
     }
 
+
+
     private fun startVolunteerList(){
-        val ref = FirebaseDatabase.getInstance().reference
-        val removeQuery = ref.child("Activity").orderByChild("activity_id").equalTo(act_id)
 
-        removeQuery.addListenerForSingleValueEvent(object:ValueEventListener{
-            override fun onCancelled(p0: DatabaseError) {
+        if(voluspace == 0){
+            toast("No Volunteer")
+        }else {
 
-            }
-            override fun onDataChange(p0: DataSnapshot) {
-                p0.children.forEach{
-                    it.ref.removeValue()
-                    toast("Item is removed")
-                }
-
-
-            }
-
-        })
-
+            val intent = Intent(this, volunteerlist::class.java)
+            intent.putExtra(FKACT_KEY, act_id)
+            startActivity(intent)
+        }
 
     }
 
