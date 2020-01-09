@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addactivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/text_createActivity"
+        android:textColor="@color/theme_color"
+        android:textSize="30sp"
+        app:fontFamily="@font/aldrich"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/mainAdd">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_title"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/cna_title"
+                app:layout_constraintTop_toTopOf="@+id/cna_title" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_time"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/cna_time_from"
+                app:layout_constraintTop_toTopOf="@+id/cna_time_from" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_address"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/cna_address"
+                app:layout_constraintTop_toTopOf="@+id/cna_address" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_desc"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/cna_desc"
+                app:layout_constraintTop_toTopOf="@+id/cna_desc" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_foodcat"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/fl_dryfood"
+                app:layout_constraintTop_toTopOf="@+id/fl_dryfood" />
+
+            <EditText
+                android:id="@+id/cna_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/hint_title"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cna_butt_uploadphoto" />
+
+            <Button
+                android:id="@+id/cna_address"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/theme_color"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/Saerch"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/butt_date" />
+
+            <EditText
+                android:id="@+id/cna_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cna_address" />
+
+            <CheckBox
+                android:id="@+id/fl_dryfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:layout_marginLeft="132dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/food_dryfoods"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_volu" />
+
+            <Button
+                android:id="@+id/cna_time_from"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="16dp"
+
+                android:ems="10"
+                android:text="@string/cna_timestart"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cna_title"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/theme_color"/>
+
+            <Button
+                android:id="@+id/cna_time_to"
+                android:layout_width="95dp"
+                android:layout_height="35dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/theme_color"
+                android:ems="10"
+                android:text="@string/cna_timeend"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="@+id/cna_title"
+                app:layout_constraintTop_toTopOf="@+id/cna_time_from" />
+
+            <TextView
+                android:id="@+id/tv_till"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="-"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toStartOf="@+id/cna_time_to"
+                app:layout_constraintStart_toEndOf="@+id/cna_time_from"
+                app:layout_constraintTop_toBottomOf="@+id/cna_title" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_date"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/butt_date"
+                app:layout_constraintTop_toTopOf="@+id/butt_date" />
+
+            <Button
+                android:id="@+id/butt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/theme_color"
+                android:ems="10"
+                android:text="@string/cna_datepicker"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_till" />
+
+            <Button
+                android:id="@+id/cna_button"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/custom_button"
+                android:backgroundTint="@color/theme_color"
+                android:text="@string/cna_createA"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fl_refriger" />
+
+            <Button
+                android:id="@+id/cna_butt_uploadphoto"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:text="@string/cna_upPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/fl_fandv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/food_fandv"
+                app:layout_constraintStart_toStartOf="@+id/fl_dryfood"
+                app:layout_constraintTop_toBottomOf="@+id/fl_dryfood" />
+
+            <CheckBox
+                android:id="@+id/fl_fresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/food_fresh"
+                app:layout_constraintStart_toStartOf="@+id/fl_fandv"
+                app:layout_constraintTop_toBottomOf="@+id/fl_fandv" />
+
+            <CheckBox
+                android:id="@+id/fl_frozen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/food_letitgoooo"
+                app:layout_constraintStart_toStartOf="@+id/fl_fresh"
+                app:layout_constraintTop_toBottomOf="@+id/fl_fresh" />
+
+            <CheckBox
+                android:id="@+id/fl_meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/food_meat"
+                app:layout_constraintStart_toStartOf="@+id/fl_frozen"
+                app:layout_constraintTop_toBottomOf="@+id/fl_frozen" />
+
+            <CheckBox
+                android:id="@+id/fl_refriger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/food_refrige"
+                app:layout_constraintStart_toStartOf="@+id/fl_meat"
+                app:layout_constraintTop_toBottomOf="@+id/fl_meat" />
+
+            <TextView
+                android:id="@+id/tv_typefooderror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/textView18"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <CheckBox
+                android:id="@+id/cb_volu"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/cna_needed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cna_desc" />
+
+            <EditText
+                android:id="@+id/cna_numVolu"
+                android:layout_width="121dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:enabled="false"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@+id/cb_volu"
+                app:layout_constraintTop_toTopOf="@+id/cb_volu" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/cna_volu"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/cb_volu"
+                app:layout_constraintTop_toTopOf="@+id/cb_volu" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/cna_numVolu"
+                app:layout_constraintStart_toStartOf="@+id/cna_numVolu"
+                app:layout_constraintTop_toBottomOf="@+id/cna_numVolu" />
+
+            <TextView
+                android:id="@+id/date_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="TextView"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/butt_date"
+                app:layout_constraintStart_toEndOf="@+id/butt_date"
+                app:layout_constraintTop_toTopOf="@+id/butt_date" />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/searchLayout"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
+
+
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+
+
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/confirmLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="112dp"
+            android:src="@drawable/ic_check_24px"
+            app:backgroundTint="#E67300" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</layout>

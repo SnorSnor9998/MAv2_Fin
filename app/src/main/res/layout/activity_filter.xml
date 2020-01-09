@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".filter">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/filter"
+        android:textColor="@color/theme_color"
+        android:textSize="35sp"
+        app:fontFamily="@font/aldrich"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/cna_foodcat"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="20sp"
+        app:fontFamily="@font/aldrich"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <CheckBox
+        android:id="@+id/fl_dryfood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:text="@string/food_dryfoods"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+    <CheckBox
+        android:id="@+id/fl_fandv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/food_fandv"
+        app:layout_constraintStart_toStartOf="@+id/fl_dryfood"
+        app:layout_constraintTop_toBottomOf="@+id/fl_dryfood" />
+
+    <CheckBox
+        android:id="@+id/fl_fresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/food_fresh"
+        app:layout_constraintStart_toStartOf="@+id/fl_fandv"
+        app:layout_constraintTop_toBottomOf="@+id/fl_fandv" />
+
+    <CheckBox
+        android:id="@+id/fl_frozen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/food_letitgoooo"
+        app:layout_constraintStart_toStartOf="@+id/fl_fresh"
+        app:layout_constraintTop_toBottomOf="@+id/fl_fresh" />
+
+    <CheckBox
+        android:id="@+id/fl_meat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/food_meat"
+        app:layout_constraintStart_toStartOf="@+id/fl_frozen"
+        app:layout_constraintTop_toBottomOf="@+id/fl_frozen" />
+
+    <CheckBox
+        android:id="@+id/fl_refriger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/food_refrige"
+        app:layout_constraintStart_toStartOf="@+id/fl_meat"
+        app:layout_constraintTop_toBottomOf="@+id/fl_meat" />
+
+    <Button
+        android:id="@+id/fl_apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/apply"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_refriger"
+        android:background="@drawable/custom_button"
+        android:backgroundTint="@color/theme_color"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

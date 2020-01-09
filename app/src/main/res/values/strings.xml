@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">FOOD KING</string>
+
+
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="wel_msg">Welcome To</string>
+    <string name="text_login">Login</string>
+    <string name="text_register">Register</string>
+    <string name="text_forgotPass">Forgot Password</string>
+    <string name="text_passreset">Password Reset</string>
+    <string name="text_submit">Submit</string>
+
+    <string name="text_username">Username</string>
+    <string name="text_name">Name</string>
+    <string name="text_contactNum">Ph. No</string>
+    <string name="text_gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="aldy_ownacc">Already have an Account</string>
+
+
+    <string name="nav_home">Home</string>
+    <string name="nav_newEvent">New Activity</string>
+    <string name="nav_profile">My Profile</string>
+
+
+    <string name="text_searchbar">Search...</string>
+    <string name="hint_title">Title...</string>
+    <string name="hint_address">Address</string>
+
+
+    <string name="text_createActivity">Create New Activity</string>
+    <string name="cna_title">Activity Title</string>
+    <string name="cna_desc">Description</string>
+    <string name="cna_address">Address</string>
+    <string name="cna_date">Date</string>
+    <string name="cna_time">Time</string>
+    <string name="cna_createA">Create Activity</string>
+    <string name="cna_foodcat">Type of Food</string>
+    <string name="cna_datepicker">Date Picker</string>
+    <string name="cna_timestart">Start</string>
+    <string name="cna_timeend">End</string>
+    <string name="cna_upPhoto">Upload A Photo</string>
+    <string name="cna_foodPre">Food Prepare</string>
+    <string name="cna_volu">Volunteer</string>
+    <string name="cna_needed">Needed</string>
+
+
+    <string name="food_dryfoods">Dry foods</string>
+    <string name="food_fandv">Fruits and vegetables</string>
+    <string name="food_fresh">Fresh foods</string>
+    <string name="food_refrige">Refrigerated</string>
+    <string name="food_letitgoooo">Frozen Food</string>
+    <string name="food_meat">Meat</string>
+
+    <string name="validate_required">Required</string>
+
+    <string name="butt_joinVolu">Join Volunteer</string>
+    <string name="filter">Filter</string>
+    <string name="apply">Apply</string>
+    <string name="updateUserDetail">Update Details</string>
+    <string name="save">Save</string>
+    <string name="changePass">Change Password</string>
+    <string name="authenticationMsg">To change your password you need to enter you current password again.</string>
+    <string name="newPassword">New Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="authentication">Authentication</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="viewMyActivity">View My Activity</string>
+    <string name="Logout">Logout</string>
+    <string name="volunteered">Volunteered Activity</string>
+    <string name="editActivity">Edit Activity</string>
+    <string name="deleteActivity">Delete Activity</string>
+    <string name="volunteerList">Volunteer List</string>
+
+    <string name="Saerch">Search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reset">Reset</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="title_activity_volunteer_list">volunteerList</string>
+</resources>

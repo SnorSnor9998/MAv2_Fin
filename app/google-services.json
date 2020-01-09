@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1058657030918",
+    "firebase_url": "https://mav2-f78ad.firebaseio.com",
+    "project_id": "mav2-f78ad",
+    "storage_bucket": "mav2-f78ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058657030918:android:d28746cecfbc11e21d0487",
+        "android_client_info": {
+          "package_name": "com.example.mav2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058657030918-e3p41ga1p3abmutsl59pv7hbevpiu8sp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mav2",
+            "certificate_hash": "51cdcd67829faf251c2d585d4c30e0d408f12048"
+          }
+        },
+        {
+          "client_id": "1058657030918-q1e6c0s3pf7cmdio4jmh0f6ku6jid11f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK1vtw0233s0OkC0zUsrhIK7HQ29SeH4c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058657030918-q1e6c0s3pf7cmdio4jmh0f6ku6jid11f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

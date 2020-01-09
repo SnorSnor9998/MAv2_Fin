@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myProfileViewModel"
+            type="com.example.mav2.MyProfileViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtUserName"
+            android:layout_width="328dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="52dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.192"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtUserMail"
+            android:layout_width="191dp"
+            android:layout_height="19dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/txtUserName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txtUserName"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_edit_24px"
+            android:paddingBottom="15px"
+            android:shadowColor="@color/colorPrimary"
+            android:text="@string/editProfile"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserMail"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_vpn_key_24px"
+            android:paddingBottom="15px"
+
+            android:text="@string/changePass"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/btnEditProfile"
+            tools:layout_editor_absoluteX="39dp" />
+
+        <Button
+            android:id="@+id/btnMyActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_history_24px"
+            android:text="@string/viewMyActivity"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/btnChangePassword"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_exit_to_app_24px"
+            android:text="@string/Logout"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/btnMyActivity"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</layout>
